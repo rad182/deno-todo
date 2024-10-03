@@ -9,7 +9,7 @@ import manifest from "../graphql.gen.ts";
 const debug = Deno.env.has("FRSH_GQL_DEV");
 
 const yoga = createYoga<FreshContext>({
-  graphiql: debug,
+  graphiql: true,
   logging: debug,
   maskedErrors: !debug,
   schema: fromManifest(manifest),
